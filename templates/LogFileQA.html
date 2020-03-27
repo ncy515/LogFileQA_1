@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>Dynalog File QA</title>
+</head>
+<body>
+<hr>
+    <h2>Patient Specific Log File QA</h2>
+    <form action='/logfileQA' method='POST'>
+        <label for="DIR_name">Directory Name:              </label>
+        <input class="form-control" type="text" name='DIR_name' id='DIR_name' placeholder="Log File Folder" aria-label="Enter Dir Name">
+        <br>
+        <label for "DtoA">Distance to Agreement:           </label>
+        <input class="form-control" type="number" name="DtoA" id="DtoA" value="0.005">
+        <br>
+        <label for "dosetoA">Dose Difference:              </label>
+        <input class="form-control" type="number" name="dosetoA" id="dosetoA" value="0.005">
+        <br>
+        <label for "Res">Resolution:                       </label>
+        <input class="form-control" type="number" name="Res" id="Res" value="0.005">
+        <br>
+        <input type='submit' value='Perform Log File QA'>
+    </form>
+    <hr>
+</body>
+</html>

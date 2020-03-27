@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HKQMH MPU QA Station</title>
+</head>
+<body>
+        <p style="text-align:center;"><img src="QueenMaryHospital.jpg" alt="Trulli" width="400" height="105"></p>
+        <h3><p style="text-align:center;">Department of Clinical Oncology</p></h3>
+        <br>
+        <h3><p style="text-align:center;">Quality Assurance Workstation</p></h3>
+        <br>
+        <p style="text-align:center;"><img src="qa_image.png" alt="Trulli" width="1400" height="200"></p>
+        <h3>Choose from the following:</h3>
+        <!--<a href="{{ url_for('upload_file') }}">Patient Specific QA</a>-->
+        <button onclick="window.location.href = '{{ url_for('upload_file') }}';">Patient Specific QA</button>
+        <br>
+        <br>
+        <!--<a href="{{ url_for('picketfence') }}">Picket Fence QA</a>-->
+        <button onclick="window.location.href = '{{ url_for('picketfence') }}';">Picket Fence QA</button>
+        <br>
+        <br>
+        <!--<a href="{{ url_for('wltest') }}">Winston Lutz Test</a>-->
+        <button onclick="window.location.href = '{{ url_for('wltest') }}';">Winston Lutz Test</button>
+</body>
+
+</html>
