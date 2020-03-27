@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Upload Picket Fence Image DICOM File</h1>
+<form method=post enctype=multipart/form-data>
+    <label for="LINAC_name">LINAC name:</label> <br>
+    <input placeholder="LINAC" name="LINAC_name" type="text" required> <br>
+    <hr>
+    <label for="directory_name">Directory Name for Picket Fence File:</label> <br>
+    <input placeholder="Directory name" name="directory_name" type="text" required> <br>
+    <hr>
+    <label for="Gantry   0">Gantry   0</label> <br>
+    <input type=file name=file1> <br>
+    <hr>
+    <label for="Gantry  90">Gantry  90</label> <br>
+    <input type=file name=file2> <br>
+    <hr>
+    <label for="Gantry 180">Gantry 180</label> <br>
+    <input type=file name=file3> <br>
+    <hr>
+    <label for="Gantry 270">Gantry 270</label> <br>
+    <input type=file name=file4> <br>
+    <hr>
+    <input type=submit value=Submit>
+</body>
+</html>
