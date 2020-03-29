@@ -30,6 +30,8 @@ class WLT:
         db = client.QA
         fs = gridfs.GridFS(db)
 
+        init_dir = os.getcwd()
+
         os.chdir(self.direct_name)
         fnames = glob.glob('*.dcm')
 
@@ -53,7 +55,7 @@ class WLT:
         c = canvas.Canvas(wltreportname)
 
         c.setLineWidth(0.3)
-        c.drawImage('C:\\Users\\ngcho\\Pictures\\qmhlogo.png', 50, 750, 90, 80)
+        c.drawImage(init_dir+"\\images\\qmh_logo.png", 50, 750, 90, 80)
         c.drawString(150, 780, 'Department of Clinical Oncology Medical Physics Unit')
         c.drawString(50, 700, 'Date: ' + datetime.now().strftime('%d-%m-%Y'))
         c.drawString(50, 685, 'LINAC: ' + self.LINAC)

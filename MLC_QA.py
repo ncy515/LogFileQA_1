@@ -20,6 +20,7 @@ class MLC_QA:
     def __init__(self, file_dir, LA_Name):
         self.file_dir = file_dir
         self.LA_Name = LA_Name
+        self.init_dir = os.getcwd()
         os.chdir(file_dir)
 
     def QA_Results(self, tolerance: float=0.5, action_tolerance: float=None, hdmlc: bool=False, num_pickets: int=None):
@@ -99,7 +100,8 @@ class MLC_QA:
         doc = SimpleDocTemplate(reportname, pagesize=A4, rightMargin=72, leftMargin=72, topMargin=72, bottomMargin=18)
         Story = []
 
-        logo = "C:\\Users\\ngcho\\Pictures\\qmhlogo.png"
+        current_directory = os.getcwd()
+        logo = self.init_dir + '\\images\\qmh_logo.png'
         formatted_time = time.ctime(os.path.getmtime(f_names[0]))
 
         im = Image(logo, 1.2 * inch, 1 * inch)

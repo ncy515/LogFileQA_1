@@ -37,6 +37,7 @@ class LogFileQA:
         global p_pcnt, fail_list, fail_str, p_str
         global qa_date
         global str1
+        global init_dir
 
         # app.config['MONGO_URI'] = "mongodb://localhost:27017/QA"
         # mongo = PyMongo(app)
@@ -44,6 +45,7 @@ class LogFileQA:
         db = client.QA
         fs = gridfs.GridFS(db)
 
+        init_dir = os.getcwd()
         os.chdir(self.path_name)
 
         if len(glob.glob('*.bin')) > 0:
@@ -114,7 +116,8 @@ class LogFileQA:
         resultfilename = self.path_name + '\\' + str1
         doc = SimpleDocTemplate(resultfilename, pagesize=A4)
 
-        logo = Image("C:\\Users\\ngcho\\Pictures_A\\qmhlogo.png")
+        logo = Image(init_dir + "\\images\\qmh_logo.png")
+        # logo = Image("C:\\Users\\ngcho\\Pictures_A\\qmhlogo.png")
         logo.drawHeight = 0.7 * inch
         logo.drawWidth = 0.85 * inch
 
